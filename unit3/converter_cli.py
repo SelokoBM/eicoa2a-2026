@@ -43,3 +43,27 @@ print(mm_to_inches.__doc__)
 print(inches_to_mm.__doc__)
 print(cm_to_inches.__doc__)
 print(inches_to_cm.__doc__)
+
+def build_menu():
+    """Build and return a list of available menu options.
+
+    Returns:
+        list: A list of strings representing the program options.
+    """
+    options = [
+        "Calculate Resistance",
+        "Convert mm to Inches",
+        "Convert Inches to mm",
+        "Convert cm to Inches",
+        "Convert Inches to cm",
+        "Exit"
+    ]
+    return options
+
+
+def display_menu():
+    """Display the menu options to the user using build_menu()."""
+    options = build_menu()
+    print("\n--- Engineering Calculator Menu ---")
+    for index, option in enumerate(options, 1):
+        print(f"{index}. {option}")
