@@ -12,3 +12,15 @@ def calc_resistance(voltage, current):
         The function raises a ZeroDivisionError if current is 0.
     """
     return voltage / current 
+def calc_power(voltage, resistance):
+    """Calculate power dissipated in a resistor using Ohm's law.
+
+    Args:
+        voltage (float) : Voltage across the component in volts (V).
+        resistance (float) : Resistance of the component in ohms (Ω). Must be non-zero.
+
+    Returns:
+        float: Power dissipated in watts (W).
+    """
+    current = voltage / resistance
+    return voltage * current
